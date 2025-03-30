@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom'
 const Dashboard = () => {
 
     const navigate = useNavigate()
-
+    const url = import.meta.env.VITE_BACKEND_URL
     const verifyUser = async () => {
         const token = localStorage.getItem('token')
         try {
@@ -26,7 +26,6 @@ const Dashboard = () => {
             })
             const result = await res.json()
             if(result.success){
-                fetchData()
                 return
             } else{
                 toast.error(result.msg)

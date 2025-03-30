@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Regular = () => {
 
+    const url = import.meta.env.VITE_BACKEND_URL
     const [image, setImage] = useState(null)
     const [loader, setLoader] = useState(false)
     const [userData, setUserData] = useState({
@@ -38,10 +39,9 @@ const Regular = () => {
         formData.append("totalTickets", Number(userData.totalTickets))
 
         try {
-            const res = await fetch(import.meta.env.VITE_BACKEND_URL+'/api/v1/package/regular-package', {
+            const res = await fetch(url+'/api/v1/package/regular-package', {
                 method: "POST",
                 headers: {
-                    "Content-type": "application/json",
                     "Authorization": `Bearer ${token}`
                 },
                 body: formData

@@ -82,7 +82,6 @@ const Offer = () => {
             const res = await fetch(url + '/api/v1/user/verify-user', {
                 method: "POST",
                 headers: {
-                    "Content-type": "application/json",
                     "Authorization": `Bearer ${token}`
                 }
             })
