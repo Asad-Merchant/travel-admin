@@ -7,11 +7,12 @@ const List = () => {
 
     const [data, setData] = useState([])
     const navigate = useNavigate()
+    const url = import.meta.env.VITE_BACKEND_URL
 
     const fetchData = async() => {
         try {
             const token = localStorage.getItem('token')
-            const res = await fetch(import.meta.env.VITE_BACKEND_URL+'/api/v1/package/list-all', {
+            const res = await fetch(url+'/api/v1/package/list-all', {
                 method: "GET",
                 headers: {"Authorization": `Bearer ${token}`}
             })
@@ -32,7 +33,7 @@ const List = () => {
         
         try {
             const token = localStorage.getItem('token')
-            const res = await fetch(import.meta.env.VITE_BACKEND_URL+'/api/v1/package/delete-package',{
+            const res = await fetch(url+'/api/v1/package/delete-package',{
                 method: "POST",
                 headers: {
                     "Content-type": 'application/json',
