@@ -114,7 +114,7 @@ const List = () => {
                         <p>{item.packageType==="r"?"Regular":"Offer"}</p>
                         <p>{handleDate(item.date)}</p>
                         <p>{`${item.noDay}day, ${item.noNight}night`}</p>
-                        <p className='cross' onClick={()=>handleClick(item._id)}>X</p>
+                        <p className='cross' onClick={(e)=>{ e.stopPropagation(); handleClick(item._id)}}>X</p>
                     </div>
                 })
             }
