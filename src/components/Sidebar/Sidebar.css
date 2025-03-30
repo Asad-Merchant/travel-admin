@@ -1,0 +1,32 @@
+.sidebar{
+    width: 22%;
+    min-height: 100vh;
+    border-right: 1px solid black;
+    padding: 40px 0px 10px 20px;
+}
+
+.sidebar-item{
+    margin-bottom: 20px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.sidebar-item:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.active{
+    background-color: rgba(0, 0, 0, 0.06);
+    border-top: 1.5px solid black;
+    border-left: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+}

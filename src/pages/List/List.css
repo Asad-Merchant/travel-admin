@@ -1,0 +1,44 @@
+.list{
+    width: 78%;
+    padding: 40px;
+}
+
+.list-table{
+    padding: 20px;
+}
+
+.list-title{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 0.5fr;
+    background-color: #f9f9f9;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    border: 1px solid #cacaca;
+    padding: 5px 18px;
+    color: grey;
+    font-weight: 700;
+}
+
+.list-item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    border: 1px solid #cacaca;
+    padding: 12px 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.list-item img{
+    width: 50px;
+}
+
+.list-item .cross{
+    color: red;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
