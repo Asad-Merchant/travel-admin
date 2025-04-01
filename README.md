@@ -39,7 +39,7 @@ The Travel Admin Panel is a web-based application that allows administrators to 
    ```
 4. Start the server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 
